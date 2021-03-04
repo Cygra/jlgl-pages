@@ -6,7 +6,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand('jlgl.pages', async () => {
       try {
         let path = vscode.workspace.workspaceFolders?.[0].uri.fsPath
-        if (!path) {
+        if (!path || !/\/pages$/.test(path)) {
           throw new Error('请打开项目文件夹')
         }
 
