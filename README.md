@@ -6,20 +6,24 @@
 
 - 选择 `JLGL: New JLGL Page Directory` 命令创建单页面文件目录
 
-    [![6EvOxJ.png](https://s3.ax1x.com/2021/03/04/6EvOxJ.png)](https://imgtu.com/i/6EvOxJ)
+  [![6EvOxJ.png](https://s3.ax1x.com/2021/03/04/6EvOxJ.png)](https://imgtu.com/i/6EvOxJ)
 
-  - 先输入文件夹路径
+- 选择 `JLGL: New JLGL Multi-Page Directory` 命令创建多页面文件目录
 
-    [![6Evxq1.png](https://s3.ax1x.com/2021/03/04/6Evxq1.png)](https://imgtu.com/i/6Evxq1)
+  [![6VJdzT.png](https://s3.ax1x.com/2021/03/04/6VJdzT.png)](https://imgtu.com/i/6VJdzT)
 
-  - 然后输入页面标题
+- 先输入文件夹路径
 
-    [![6ExQJS.png](https://s3.ax1x.com/2021/03/04/6ExQJS.png)](https://imgtu.com/i/6ExQJS)
+  [![6VUsc6.png](https://s3.ax1x.com/2021/03/04/6VUsc6.png)](https://imgtu.com/i/6VUsc6)
 
-  - 回车，完成创建
+- 然后输入页面标题
 
-## Release Notes
+  [![6VUr1x.png](https://s3.ax1x.com/2021/03/04/6VUr1x.png)](https://imgtu.com/i/6VUr1x)
 
-### 0.3.4
+- 回车，完成创建
 
-- 支持单页面创建
+## 版本记录
+
+### 1.0.0
+
+- 支持单页、多页（带路由）页面创建
