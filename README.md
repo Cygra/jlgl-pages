@@ -6,11 +6,11 @@
 
 - 选择 `JLGL: New JLGL Page Directory` 命令创建单页面文件目录
 
-  [![6EvOxJ.png](https://s3.ax1x.com/2021/03/04/6EvOxJ.png)](https://imgtu.com/i/6EvOxJ)
+  [![6VdXpn.png](https://s3.ax1x.com/2021/03/04/6VdXpn.png)](https://imgtu.com/i/6VdXpn)
 
 - 选择 `JLGL: New JLGL Multi-Page Directory` 命令创建多页面文件目录
 
-  [![6VJdzT.png](https://s3.ax1x.com/2021/03/04/6VJdzT.png)](https://imgtu.com/i/6VJdzT)
+  [![6Vdjlq.png](https://s3.ax1x.com/2021/03/04/6Vdjlq.png)](https://imgtu.com/i/6Vdjlq)
 
 - 先输入文件夹路径
 
