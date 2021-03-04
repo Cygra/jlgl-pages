@@ -14,17 +14,39 @@
   ],
   "activationEvents": [
     "onCommand:jlgl.pages",
-    "onCommand:jlgl.pagesWithRoute"
+    "onCommand:jlgl.pagesWithRoute",
+    "onCommand:jlgl.openInBrowser"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [{
-      "command": "jlgl.pages",
-      "title": "JLGL: New JLGL Page Directory"
-    }, {
-      "command": "jlgl.pagesWithRoute",
-      "title": "JLGL: New JLGL Multi-Page Directory With Route"
-    }]
+    "commands": [
+      {
+        "command": "jlgl.pages",
+        "title": "JLGL: New JLGL Page Directory"
+      },
+      {
+        "command": "jlgl.pagesWithRoute",
+        "title": "JLGL: New JLGL Multi-Page Directory With Route"
+      },
+      {
+        "command": "jlgl.openInBrowser",
+        "title": "JLGL: Open Current Folder In Browser"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "jlgl.openInBrowser"
+        }
+      ],
+      "commandPalette": [
+        {
+          "when": "false",
+          "command": "jlgl.openInBrowser"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",

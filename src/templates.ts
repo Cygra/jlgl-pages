@@ -1,12 +1,10 @@
-export const pageConfig = (title:string) => (
-`{
+export const pageConfig = (title: string) =>
+  `{
   "title": "${title}"
 }
 `
-)
 
-export const pageSingle =
-`<template>
+export const pageSingle = `<template>
   <div></div>
 </template>
 
@@ -19,15 +17,13 @@ export default {
 </style>
 `
 
-export const mainJsSingle =
-`import Vue from 'vue'
+export const mainJsSingle = `import Vue from 'vue'
 import Page from './Page.vue'
 
 new Vue({ render: h => h(Page) }).$mount('#app')
 `
 
-export const pageMulti =
-`<template>
+export const pageMulti = `<template>
   <div id="app">
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive" />
@@ -37,8 +33,7 @@ export const pageMulti =
 </template>
 `
 
-export const mainJsMulti =
-`import Vue from 'vue'
+export const mainJsMulti = `import Vue from 'vue'
 import Router from 'vue-router'
 import Page from './Page.vue'
 

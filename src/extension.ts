@@ -1,7 +1,13 @@
 import * as vscode from 'vscode'
 import * as fs from 'fs'
 import { getUserInput } from './utils'
-import { mainJsMulti, mainJsSingle, pageConfig, pageMulti, pageSingle } from './templates'
+import {
+  mainJsMulti,
+  mainJsSingle,
+  pageConfig,
+  pageMulti,
+  pageSingle,
+} from './templates'
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
@@ -30,6 +36,35 @@ export function activate(context: vscode.ExtensionContext) {
         fs.writeFileSync(`${path}/main.js`, mainJsMulti)
         fs.writeFileSync(`${path}/views/Index.vue`, pageSingle)
         vscode.window.showInformationMessage('done')
+      } catch (error) {
+        vscode.window.showErrorMessage(error.message)
+      }
+    })
+  )
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand('jlgl.openInBrowser', (uri: vscode.Uri) => {
+      try {
+        if (
+          !uri ||
+          !uri.path ||
+          !/pages\/src\/pages\/([a-zA-Z0-9-]+)$/.test(uri.path)
+        ) {
+          throw new Error('不是 pages 项目的页面文件夹')
+        }
+
+        const target = /[^/]*$/.exec(uri.path)?.[0]
+        if (!target) throw new Error('未匹配到路径')
+
+        vscode.commands.executeCommand(
+          'vscode.open',
+          vscode.Uri.parse(
+            `http://localhost:8080/pages/${target
+              .replace(/([A-Z])/g, '-$1')
+              .replace(/[_.\- ]+/g, '-')
+              .toLowerCase()}.html`
+          )
+        )
       } catch (error) {
         vscode.window.showErrorMessage(error.message)
       }

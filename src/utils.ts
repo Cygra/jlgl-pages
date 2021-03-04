@@ -8,7 +8,9 @@ export const getUserInput = async () => {
 
   path += '/src/pages'
 
-  const input = await vscode.window.showInputBox({ prompt: '请输入页面文件夹路径' })
+  const input = await vscode.window.showInputBox({
+    prompt: '请输入页面文件夹路径',
+  })
   if (!input) {
     throw new Error('请输入页面文件夹路径')
   }
