@@ -16,21 +16,7 @@
   "contributes": {
     "commands": {
       "command": "jlgl.pages",
-      "title": "New JLGL Page Directory"
-    },
-    "menus": {
-      "explorer/context": [
-        {
-          "command": "jlgl.pages",
-          "when": "explorerResourceIsFolder"
-        }
-      ],
-      "commandPalette": [
-        {
-          "command": "jlgl.pages",
-          "when": "false"
-        }
-      ]
+      "title": "JLGL: New JLGL Page Directory"
     }
   },
   "scripts": {
