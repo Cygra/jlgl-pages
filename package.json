@@ -2,7 +2,10 @@
   "name": "jlgl-pages",
   "displayName": "jlgl-pages",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.3.4",
+  "publisher": "CygraW",
+  "repository": "https://github.com/Cygra/jlgl-pages",
+  "icon": "https://imgtu.com/i/6VPUoR",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -16,21 +19,7 @@
   "contributes": {
     "commands": {
       "command": "jlgl.pages",
-      "title": "New JLGL Page Directory"
-    },
-    "menus": {
-      "explorer/context": [
-        {
-          "command": "jlgl.pages",
-          "when": "explorerResourceIsFolder"
-        }
-      ],
-      "commandPalette": [
-        {
-          "command": "jlgl.pages",
-          "when": "false"
-        }
-      ]
+      "title": "JLGL: New JLGL Page Directory"
     }
   },
   "scripts": {
@@ -42,13 +31,17 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.46.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.4",
     "@types/node": "^12.11.7",
-    "eslint": "^7.19.0",
+    "@types/vscode": "^1.46.0",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
+    "eslint": "^7.19.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
     "glob": "^7.1.6",
     "mocha": "^8.2.1",
     "typescript": "^4.1.3",
