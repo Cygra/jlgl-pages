@@ -5,15 +5,9 @@
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint"
-  ],
-  "extends": "standard",
+  "plugins": ["prettier"],
+  "extends": ["plugin:prettier/recommended"],
   "rules": {
-    "space-before-function-paren": ["error", {
-      "anonymous": "never",
-      "named": "never",
-      "asyncArrow": "always"
-    }]
+    "prettier/prettier": "error"
   }
 }
